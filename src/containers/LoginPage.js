@@ -16,7 +16,7 @@ export default function LoginPage() {
                     <span>
                         <button>Login</button>
                     </span>
-                    <p>Don't have an account. <a href='#'>Sign up</a>.</p>
+                    <p>Don't have an account? <a href='#'>Sign up</a>.</p>
                 </div>
             </div>
         </div>
