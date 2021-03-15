@@ -1,4 +1,4 @@
-.loginPageMain {
+.pageMain {
     background-color:whitesmoke;
     width: 350px;
     height: 350px;
@@ -7,56 +7,56 @@
     align-items: center;
 }
 
-.loginPageMainOne h3, .loginPageMainOne p{
+.pageMainOne h3, .pageMainOne p{
     background-color:whitesmoke; 
     text-align: center;
 }
 
-.loginPageMainOne h3{
+.pageMainOne h3{
     margin:0;
     padding:5px
 }
 
-.loginPageMainOne p{
+.pageMainOne p{
     margin:0;
     padding:5px 0 30px 5px
 }
 
-.loginPageMainTwo, .loginPageMainThree {
+.pageMainTwo, .pageMainThree {
     background-color: whitesmoke;
 }
 
-.loginPageMainTwo{
+.pageMainTwo{
     display: flex;
     flex-flow: column wrap;
     align-content: space-around;
 }
 
-.loginPageMainTwo input {
+.pageMainTwo input {
     background-color: whitesmoke;
     width: 215px;
     height: 35px;
     margin: 0 0 20px 0px;
 }
 
-.loginPageMainThree{
+.pageMainThree{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.loginPageMainThree button{
+.pageMainThree button{
     background-color:turquoise;
     width: 215px;
     height: 35px;
 }
 
-.loginPageMainThree p{
+.pageMainThree p{
     background-color:whitesmoke;
     margin: 15px 0px 0 0;
     padding:5px 0 30px 5px;
     text-align: center;
 }
 
-.loginPageMainThree a{
+.pageMainThree a{
     background-color: whitesmoke;
 }
