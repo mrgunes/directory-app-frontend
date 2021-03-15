@@ -1,5 +1,5 @@
 *{
-    background-color:lightgray
+    background-color:rgb(199, 135, 93)
 }
 
 .loginPageMain {
@@ -23,7 +23,7 @@
     padding:5px 0 30px 5px
 }
 
-.loginPageMainTwo{
+.loginPageMainTwo, .loginPageMainThree {
     background-color: whitesmoke;
 }
 
