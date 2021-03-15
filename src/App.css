@@ -1,11 +1,10 @@
-*{
-    background-color:rgb(199, 135, 93)
-}
-
 .loginPageMain {
     background-color:whitesmoke;
     width: 350px;
     height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .loginPageMainOne h3, .loginPageMainOne p{
@@ -27,13 +26,37 @@
     background-color: whitesmoke;
 }
 
+.loginPageMainTwo{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-around;
+}
+
+.loginPageMainTwo input {
+    background-color: whitesmoke;
+    width: 215px;
+    height: 35px;
+    margin: 0 0 20px 0px;
+}
+
+.loginPageMainThree{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .loginPageMainThree button{
     background-color:turquoise;
+    width: 215px;
+    height: 35px;
 }
 
 .loginPageMainThree p{
     background-color:whitesmoke;
-    margin:0;
+    margin: 15px 0px 0 0;
     padding:5px 0 30px 5px;
     text-align: center;
+}
+
+.loginPageMainThree a{
+    background-color: whitesmoke;
 }
