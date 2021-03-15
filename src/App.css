@@ -1,0 +1,39 @@
+*{
+    background-color:lightgray
+}
+
+.loginPageMain {
+    background-color:whitesmoke;
+    width: 350px;
+    height: 350px;
+}
+
+.loginPageMainOne h3, .loginPageMainOne p{
+    background-color:whitesmoke; 
+    text-align: center;
+}
+
+.loginPageMainOne h3{
+    margin:0;
+    padding:5px
+}
+
+.loginPageMainOne p{
+    margin:0;
+    padding:5px 0 30px 5px
+}
+
+.loginPageMainTwo{
+    background-color: whitesmoke;
+}
+
+.loginPageMainThree button{
+    background-color:turquoise;
+}
+
+.loginPageMainThree p{
+    background-color:whitesmoke;
+    margin:0;
+    padding:5px 0 30px 5px;
+    text-align: center;
+}
