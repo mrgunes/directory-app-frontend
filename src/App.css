@@ -32,6 +32,11 @@
     display:none
 }
 
+.existUser{
+    color:red;
+    display:none 
+}
+
 .pageMainTwo, .pageMainThree {
     background-color: whitesmoke;
 }

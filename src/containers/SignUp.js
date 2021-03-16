@@ -7,6 +7,7 @@ export default function SignUp() {
             <div className='pageChild'>
                 <div className='pageMainOne'>
                     <h3>Register Form</h3>
+                    <p className='existUser' >This e-mail already registered.</p>
                 </div>
                 <div className='pageMainTwo'>
                     <input placeholder='name'/>
