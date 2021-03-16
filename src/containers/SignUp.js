@@ -6,11 +6,11 @@ export default function SignUp() {
             <div className='pageMain'>
             <div className='pageChild'>
                 <div className='pageMainOne'>
-                    <h3>Create User Form</h3>
+                    <h3>Register Form</h3>
                 </div>
                 <div className='pageMainTwo'>
                     <input placeholder='name'/>
-                    <input placeholder='last name' />
+                    <input placeholder='lastname' />
                 </div>
                 <div className='pageMainTwo'>
                     <input placeholder='email@example.com'/>

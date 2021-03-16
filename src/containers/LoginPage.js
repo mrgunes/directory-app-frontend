@@ -7,6 +7,8 @@ export default function LoginPage() {
                 <div className='pageMainOne'>
                     <h3>Login Form</h3>
                     <p>Login to access your Directory</p>
+                    <p className='notFound' >User was not found.</p>
+                    <p className='wrongUser' >Wrong e-mail or password</p>
                 </div>
                 <div className='pageMainTwo'>
                     <input placeholder='email@example.com'/>

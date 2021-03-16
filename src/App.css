@@ -1,7 +1,7 @@
 .pageMain {
     background-color:whitesmoke;
-    width: 350px;
-    height: 350px;
+    width: 351px;
+    height: 351px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,6 +20,16 @@
 .pageMainOne p{
     margin:0;
     padding:5px 0 30px 5px
+}
+
+.notFound{
+    color:red;
+    display:none
+}
+
+.wrongUser{
+    color:red;
+    display:none
 }
 
 .pageMainTwo, .pageMainThree {
