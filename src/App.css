@@ -75,3 +75,38 @@
 .pageMainThree a{
     background-color: whitesmoke;
 }
+
+.userPageMain{
+    height: 100vh;
+    width: 100vw;
+}
+
+.userPageNav{
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+}
+
+.userPageSpanOne{
+    background-color: whitesmoke;
+}
+
+.userPageh3One{
+    margin: 18px 0px 0px 33px;
+    background-color: whitesmoke;
+    padding: 0 0 10px 0px;
+}
+
+.userPageSpanTwo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: whitesmoke;
+}
+
+.userPageh3Two{
+    margin: 18px 33px 0px 0px;
+    background-color: whitesmoke;
+    padding: 0 0 10px 0px;
+    cursor: pointer;
+}
