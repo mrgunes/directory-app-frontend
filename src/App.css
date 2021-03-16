@@ -97,16 +97,24 @@
     padding: 0 0 10px 0px;
 }
 
-.userPageSpanTwo{
+.userPageUl{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     background-color: whitesmoke;
+    list-style-type: none;
+    
 }
 
-.userPageh3Two{
-    margin: 18px 33px 0px 0px;
+.userPageLi{
+    margin: 7px 33px 0px 0px;
     background-color: whitesmoke;
     padding: 0 0 10px 0px;
-    cursor: pointer;
+    
+}
+
+.userPageLi a{
+    background-color: whitesmoke; 
+    text-decoration: none;
+    color: black;
 }

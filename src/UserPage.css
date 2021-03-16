@@ -2,15 +2,53 @@
     .userPageSpanOne{
         display: none;
     }
-    .userPageSpanTwo{
+    .userPageUl{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         background-color: whitesmoke;
     }
 
-    .userPageh3Two{
+    .userPageLi{
+        margin: 18px 33px 0px 63px;
+        background-color: whitesmoke;
+        padding: 0 0 10px 0px;
+        cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .userPageSpanOne{
+        display: none;
+    }
+    .userPageUl{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: whitesmoke;
+    }
+
+    .userPageLi{
         margin: 18px 33px 0px 50px;
+        background-color: whitesmoke;
+        padding: 0 0 10px 0px;
+        cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .userPageSpanOne{
+        display: none;
+    }
+    .userPageUl{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: whitesmoke;
+    }
+
+    .userPageLi{
+        margin: 18px 33px 0px 30px;
         background-color: whitesmoke;
         padding: 0 0 10px 0px;
         cursor: pointer;
