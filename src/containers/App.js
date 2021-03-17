@@ -12,7 +12,7 @@ function App() {
       {/* <LoginPage/> */}
       {/* <SignUp/> */}
       {/* <UserCreated/> */}
-      <UserPage/>
+      {/* <UserPage/> */}
       {/* <ContactPage/> */}
       {/* <ContactView/> */}
     </div>
