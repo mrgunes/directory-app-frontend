@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import '../SignUp.css'
 
 export default function SignUp() {
     return (
@@ -11,15 +12,16 @@ export default function SignUp() {
                     </div>
                     <div className='pageMainTwo'>
                         <input placeholder='name'/>
-                        <input placeholder='lastname' />
+                        <input placeholder='last name' />
                     </div>
                     <div className='pageMainTwo'>
                         <input placeholder='email@example.com'/>
                         <input placeholder='password' />
                     </div>
-                    <div className='pageMainThree'>
-                        <span>
+                    <div className='pageMainThreeSignUp'>
+                        <span className='button'>
                             <button>Submit</button>
+                            <button>Cancel</button>
                         </span>
                     </div>
                 </div>

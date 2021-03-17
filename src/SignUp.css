@@ -1,0 +1,14 @@
+.pageMainThreeSignUp{
+    background-color: whitesmoke
+}
+
+.button{
+    background-color: whitesmoke;
+}
+
+.pageMainThreeSignUp button {
+    background-color: turquoise;
+    width: 140px;
+    height: 35px;
+    margin: 0 3px;
+}
