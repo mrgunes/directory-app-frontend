@@ -37,7 +37,7 @@
     display:none 
 }
 
-.pageMainTwo, .pageMainThree {
+.pageMainTwo, .pageMainThree, .pageContactButton {
     background-color: whitesmoke;
 }
 
@@ -47,11 +47,12 @@
     align-content: space-around;
 }
 
-.pageMainTwo input {
-    background-color: whitesmoke;
+.pageMainTwo input, .pageMainContactAreaTwo input{
+    background-color: white;
     width: 215px;
     height: 35px;
     margin: 0 0 20px 0px;
+    border-width: thin;
 }
 
 .pageMainThree{
@@ -76,28 +77,28 @@
     background-color: whitesmoke;
 }
 
-.userPageMain{
+.userPageMain, .contactPageMain{
     height: 100vh;
     width: 100vw;
 }
 
-.userPageNav{
+.userPageNav, .contactPageNav{
     display: flex;
     justify-content: space-between;
     background-color: whitesmoke;
 }
 
-.userPageSpanOne{
+.userPageSpanOne, .contactPageSpanOne{
     background-color: whitesmoke;
 }
 
-.userPageh3One{
+.userPageh3One, .contactPageh3One{
     margin: 18px 0px 0px 33px;
     background-color: whitesmoke;
     padding: 0 0 10px 0px;
 }
 
-.userPageUl{
+.userPageUl, .contactPageUl{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -106,14 +107,14 @@
     
 }
 
-.userPageLi{
+.userPageLi, .contactPageLi{
     margin: 7px 33px 0px 0px;
     background-color: whitesmoke;
     padding: 0 0 10px 0px;
     
 }
 
-.userPageLi a{
+.userPageLi a, .contactPageLi a{
     background-color: whitesmoke; 
     text-decoration: none;
     color: black;
@@ -172,4 +173,56 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;   
+}
+
+.pageMainContactArea{
+    background-color: whitesmoke;
+    width: 600px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 120px auto;
+}
+
+.pageMainContactAreaTwo{
+    background-color: whitesmoke;
+    display: flex;
+    align-content: space-around;
+}
+
+.pageMainContactAreaTwoDivOne{
+    background-color: whitesmoke;
+    margin-left: 35px;
+}
+
+.pageMainContactAreaTwoDivTwo{
+    background-color: whitesmoke;
+    margin-left: 20px;
+}
+
+.pageContactTextAreaOne{
+    margin: 0px 0px 18px;
+    background-color: white;
+    width: 214px;
+    height: 38px;
+    resize: none;
+}
+
+.pageContactTextAreaTwo{
+    background-color: white;
+    width: 214px;
+    height: 81px;
+    resize: none;
+}
+
+.button{
+    background-color: whitesmoke;
+}
+
+.pageContactButton button{
+    background-color: turquoise;
+    width: 140px;
+    height: 35px;
+    margin: 0 80px;
 }
