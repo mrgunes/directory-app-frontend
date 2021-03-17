@@ -1,5 +1,6 @@
 import React from 'react';
-import '../SignUp.css'
+import '../SignUp.css';
+import {Link} from 'react-router-dom';
 
 export default function SignUp() {
     return (
@@ -20,8 +21,8 @@ export default function SignUp() {
                     </div>
                     <div className='pageMainThreeSignUp'>
                         <span className='button'>
-                            <button>Submit</button>
-                            <button>Cancel</button>
+                            <Link to='/usercreated' className='button'><button>Submit</button></Link>
+                            <Link to='/' className='button'><button>Cancel</button></Link>
                         </span>
                     </div>
                 </div>

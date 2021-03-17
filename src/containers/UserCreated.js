@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 
 export default function UserCreated() {
     return (
@@ -10,7 +11,7 @@ export default function UserCreated() {
                     </div>
                     <div className='pageMainThree'>
                         <span>
-                            <button>Return Login</button>
+                            <Link to='/'><button>Return Login</button></Link>
                         </span>
                     </div>
                 </div>

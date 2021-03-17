@@ -1,5 +1,6 @@
 import React from 'react';
-import '../MediaQueries.css'
+import '../MediaQueries.css';
+import {Link} from 'react-router-dom';
 
 export default function UserPage() {
     return (
@@ -21,7 +22,7 @@ export default function UserPage() {
                     </div>
                     <div className='pageMainThree'>
                         <span>
-                            <button>Create</button>
+                        <Link to='/contactpage'><button>Create</button></Link>
                         </span>
                     </div>
                 </div>

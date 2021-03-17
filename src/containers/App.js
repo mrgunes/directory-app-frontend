@@ -5,16 +5,19 @@ import UserCreated from './UserCreated';
 import UserPage from  './UserPage';
 import ContactPage from './ContactPage'
 import ContactView from './ContactView'
+import {Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
     <div className="main">
-      {/* <LoginPage/> */}
-      {/* <SignUp/> */}
-      {/* <UserCreated/> */}
-      {/* <UserPage/> */}
-      {/* <ContactPage/> */}
-      {/* <ContactView/> */}
+      <Switch>
+         <Route exact path="/" component={LoginPage} />
+         <Route path="/signup" component={SignUp} />
+         <Route path="/usercreated" component={UserCreated} />
+         <Route path="/userpage" component={UserPage} />
+         <Route path="/contactpage" component={ContactPage} />
+         <Route path="/contactview" component={ContactView} />
+       </Switch>
     </div>
   );
 }
