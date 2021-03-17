@@ -1,5 +1,5 @@
 import React from 'react';
-import '../UserPage.css'
+import '../MediaQueries.css'
 
 export default function UserPage() {
     return (

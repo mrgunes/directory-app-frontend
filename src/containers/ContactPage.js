@@ -1,4 +1,5 @@
 import React from 'react';
+import '../MediaQueries.css'
 
 export default function ContactPage() {
     return (
