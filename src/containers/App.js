@@ -4,6 +4,7 @@ import SignUp from './SignUp';
 import UserCreated from './UserCreated';
 import UserPage from  './UserPage';
 import ContactPage from './ContactPage'
+import ContactView from './ContactView'
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
       {/* <LoginPage/> */}
       {/* <SignUp/> */}
       {/* <UserCreated/> */}
-      {/* <UserPage/> */}
-      <ContactPage/>
+      <UserPage/>
+      {/* <ContactPage/> */}
+      {/* <ContactView/> */}
     </div>
   );
 }
