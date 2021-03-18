@@ -23,13 +23,19 @@
 }
 
 .notFound{
-    color:red;
     display:none
 }
 
-.wrongUser{
+.notFoundP{
     color:red;
+}
+
+.wrongUser{
     display:none
+}
+
+.wrongUserP{
+    color:red;
 }
 
 .existUser{
