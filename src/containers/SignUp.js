@@ -20,10 +20,8 @@ export default function SignUp() {
                         <input placeholder='password' />
                     </div>
                     <div className='pageMainThreeSignUp'>
-                        <span className='button'>
-                            <Link to='/usercreated' className='button'><button>Submit</button></Link>
-                            <Link to='/' className='button'><button>Cancel</button></Link>
-                        </span>
+                        <Link to='/usercreated' className='button'><button>Submit</button></Link>
+                        <Link to='/' className='button'><button>Cancel</button></Link>
                     </div>
                 </div>
             </div>

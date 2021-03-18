@@ -217,16 +217,16 @@
     resize: none;
 }
 
-.button{
-    background-color: whitesmoke;
-}
-
 .pageContactButton button{
     background-color: turquoise;
     width: 140px;
     height: 35px;
-    margin: 0 80px;
     cursor: pointer;
+}
+
+.pageContactButton{
+    display: flex;
+    justify-content: space-around;
 }
 
 .hiddenButton{
@@ -239,7 +239,7 @@ h4{
 
 h5{
     margin: 0 auto;
-    display: table;
+    text-align:center;
     font-weight: 400;
     background-color: whitesmoke;
 }

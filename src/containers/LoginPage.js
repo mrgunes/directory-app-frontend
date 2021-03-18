@@ -16,9 +16,7 @@ export default function LoginPage() {
                     <input placeholder='password' />
                 </div>
                 <div className='pageMainThree'>
-                    <span>
-                        <Link to='/userpage'><button>Login</button></Link>
-                    </span>
+                    <Link to='/userpage'><button>Login</button></Link>
                     <p>Don't have an account? <Link to='/signup'>Sign Up</Link>.</p>
                 </div>
             </div>

@@ -11,7 +11,7 @@ export default function UserPage() {
                 </span>
                 <ul className='userPageUl'>
                     <li className='userPageLi'><a href='#'>Account</a></li>
-                    <li className='userPageLi'><a href='#'>Logout</a></li>
+                    <li className='contactPageLi'><Link to='/'>Logout</Link></li>
                 </ul>
             </div>
             <div className='pageMainUser'>
@@ -21,9 +21,7 @@ export default function UserPage() {
                         <p>You can create your contact list click to 'Create' button.</p>
                     </div>
                     <div className='pageMainThree'>
-                        <span>
                         <Link to='/contactpage'><button>Create</button></Link>
-                        </span>
                     </div>
                 </div>
             </div>
@@ -35,7 +33,7 @@ export default function UserPage() {
                                 <i className="far fa-address-card fa-5x" ></i>
                             </div>
                             <div className='infoArea'>
-                                <h4>Kaan Catik</h4>
+                                <Link to='/contactview'><h4>Kaan Catik</h4></Link>
                                 <p>Web Developer</p>
                                 <p>+1 (123)456 7890</p>
                             </div>

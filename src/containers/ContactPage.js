@@ -1,5 +1,6 @@
 import React from 'react';
-import '../MediaQueries.css'
+import '../MediaQueries.css';
+import {Link} from 'react-router-dom';
 
 export default function ContactPage() {
     return (
@@ -10,7 +11,7 @@ export default function ContactPage() {
                 </span>
                 <ul className='contactPageUl'>
                     <li className='contactPageLi'><a href='#'>Account</a></li>
-                    <li className='contactPageLi'><a href='#'>Logout</a></li>
+                    <li className='contactPageLi'><Link to='/'>Logout</Link></li>
                 </ul>
             </div>
             <div className='pageMainContactArea'>
@@ -34,10 +35,8 @@ export default function ContactPage() {
                         </div>
                     </div>
                     <div className='pageContactButton'>
-                        <span className='button'>
-                            <button>Save</button>
-                            <button>Cancel</button>
-                        </span>
+                        <Link to='/userpage'><button>Save</button></Link>
+                        <Link to='/userpage'><button>Cancel</button></Link>
                     </div>
                 </div>
             </div>

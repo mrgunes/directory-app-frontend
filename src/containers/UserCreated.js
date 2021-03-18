@@ -10,9 +10,7 @@ export default function UserCreated() {
                         <p>User was created. Please login.</p>
                     </div>
                     <div className='pageMainThree'>
-                        <span>
-                            <Link to='/'><button>Return Login</button></Link>
-                        </span>
+                        <Link to='/'><button>Return Login</button></Link>
                     </div>
                 </div>
             </div>
