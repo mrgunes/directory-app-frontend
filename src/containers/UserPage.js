@@ -21,7 +21,7 @@ export default function UserPage() {
                         <p>You can create your contact list click to 'Create' button.</p>
                     </div>
                     <div className='pageMainThree'>
-                        <Link to='/contactpage'><button>Create</button></Link>
+                        <Link to='/createcontact'><button>Create</button></Link>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@ export default function UserPage() {
                                 <i className="far fa-address-card fa-5x" ></i>
                             </div>
                             <div className='infoArea'>
-                                <Link to='/contactview'><h4>Kaan Catik</h4></Link>
+                                <h4><Link to='/contactview'>Kaan Catik</Link></h4>
                                 <p>Web Developer</p>
                                 <p>+1 (123)456 7890</p>
                             </div>

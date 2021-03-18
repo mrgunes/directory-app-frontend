@@ -3,7 +3,7 @@ import LoginPage from './LoginPage'
 import SignUp from './SignUp';
 import UserCreated from './UserCreated';
 import UserPage from  './UserPage';
-import ContactPage from './ContactPage'
+import CreateContact from './CreateContact'
 import ContactView from './ContactView'
 import {Route, Switch} from 'react-router-dom';
 
@@ -15,7 +15,7 @@ function App() {
          <Route path="/signup" component={SignUp} />
          <Route path="/usercreated" component={UserCreated} />
          <Route path="/userpage" component={UserPage} />
-         <Route path="/contactpage" component={ContactPage} />
+         <Route path="/createcontact" component={CreateContact} />
          <Route path="/contactview" component={ContactView} />
        </Switch>
     </div>

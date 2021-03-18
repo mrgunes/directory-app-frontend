@@ -2,7 +2,7 @@ import React from 'react';
 import '../MediaQueries.css';
 import {Link} from 'react-router-dom';
 
-export default function ContactPage() {
+export default function CreateContact() {
     return (
         <div className='userPageMain'>
             <div className='contactPageNav'>
