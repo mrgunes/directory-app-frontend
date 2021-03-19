@@ -27,7 +27,6 @@ export default function SignUp() {
     }
 
     let handleSubmit=(e)=>{
-        e.preventDefault()
         axios.post('https://localhost:8000/signup', {name, lastName, email, password})
         .then((response)=>{
             console.log(response.data)
