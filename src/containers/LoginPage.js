@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Link, useHistory} from 'react-router-dom';
+import axios from 'axios';
 
 export default function LoginPage() {
     let history = useHistory();
@@ -16,23 +17,29 @@ export default function LoginPage() {
         setPassword(e.target.value)
     }
 
-    console.log(email, password);
+    // console.log(email, password);
 
     let onLogin=()=>{
-        if (email!=='test@test.com'){
-            if(checkUser==='wrongUserP'){
-                setCheckUser('wrongUser')
+        axios.post('http://localhost:8000/', {email, password})
+        .then((response)=>{
+            console.log(response.data);
+            let data=response.data;
+            
+            if (typeof data==='object'){
+                if(checkUser==='wrongUserP'){
+                    setCheckUser('wrongUser')
+                    setFindUser('notFoundP')
+                }
                 setFindUser('notFoundP')
-            }
-            setFindUser('notFoundP')
-        } else if (email==='test@test.com' && password!=='12345'){
-            if(findUser==='notFoundP'){
-                setFindUser('notFound')
+            } else if (data===false){
+                if(findUser==='notFoundP'){
+                    setFindUser('notFound')
+                    setCheckUser('wrongUserP')
+                }
                 setCheckUser('wrongUserP')
-            }
-            setCheckUser('wrongUserP')
-        } else if (email==='test@test.com' && password==='12345')
-            history.push('/userpage')   
+            } else if (data===true)
+                history.push('/userpage')
+        })   
     }
 
     return (
@@ -45,8 +52,8 @@ export default function LoginPage() {
                     <p className={checkUser} >Email or password doesn't match.</p>
                 </div>
                 <div className='pageMainTwo'>
-                    <input placeholder='email@example.com' onChange={handleEmail}/>
-                    <input placeholder='password' onChange={handlePassword}/>
+                    <input placeholder='email@example.com' name='email' onChange={handleEmail}/>
+                    <input placeholder='password' name='password' onChange={handlePassword}/>
                 </div>
                 <div className='pageMainThree'>
                     <button onClick={onLogin}>Login</button>
