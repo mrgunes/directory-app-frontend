@@ -39,8 +39,11 @@
 }
 
 .existUser{
-    color:red;
     display:none 
+}
+
+.existUserP{
+    color:red;
 }
 
 .pageMainTwo, .pageMainThree, .pageContactButton {

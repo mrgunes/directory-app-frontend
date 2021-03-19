@@ -9,6 +9,7 @@ export default function SignUp() {
     let [lastName, setLastName]=useState('')
     let [email, setEmail]=useState('');
     let [password, setPassword]=useState('');
+    let [regEmail, setRegEmail]=useState('existUser')
 
     let handleName=(e)=>{
         setName(e.target.value)
@@ -26,10 +27,17 @@ export default function SignUp() {
         setPassword(e.target.value)
     }
 
-    let handleSubmit=(e)=>{
-        axios.post('https://localhost:8000/signup', {name, lastName, email, password})
+    let handleSubmit=()=>{
+        axios.post('http://localhost:8000/signup', {name, lastName, email, password})
         .then((response)=>{
-            console.log(response.data)
+        //console.log(response.data)
+        let data=response.data;
+        //console.log(data.name);
+        if (data.name==='MongoError'){
+            setRegEmail('existUserP')
+        } else {
+            history.push('/usercreated')
+        }
         })
         .catch((err)=>{
             console.log(err.message)
@@ -41,18 +49,18 @@ export default function SignUp() {
                 <div className='pageChild'>
                     <div className='pageMainOne'>
                         <h3>Register Form</h3>
-                        <p className='existUser' >This e-mail already registered.</p>
+                        <p className={regEmail} >This e-mail already registered.</p>
                     </div>
                     <div className='pageMainTwo'>
                         <input placeholder='name' name='name' onChange={handleName}/>
-                        <input placeholder='last name' name='lastname' onChange={handleLastName}/>
+                        <input placeholder='last name' name='lastName' onChange={handleLastName}/>
                     </div>
                     <div className='pageMainTwo'>
                         <input placeholder='email@example.com' name='email' onChange={handleEmail}/>
                         <input placeholder='password' name='password' onChange={handlePassword}/>
                     </div>
                     <div className='pageMainThreeSignUp'>
-                        <Link to='/usercreated' className='button'><button onClick={handleSubmit}>Submit</button></Link>
+                        <button className='button' onClick={handleSubmit}>Submit</button>
                         <Link to='/' className='button'><button>Cancel</button></Link>
                     </div>
                 </div>
