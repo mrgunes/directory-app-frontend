@@ -10,7 +10,7 @@ export default function UserPage() {
                     <h3 className='userPageh3One'>Welcome Kaan Catik</h3>
                 </span>
                 <ul className='userPageUl'>
-                    <li className='userPageLi'><a href='#'>Account</a></li>
+                    {/* <li className='userPageLi'><a href='#'>Account</a></li> */}
                     <li className='contactPageLi'><Link to='/'>Logout</Link></li>
                 </ul>
             </div>

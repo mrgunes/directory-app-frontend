@@ -5,29 +5,24 @@ import axios from 'axios';
 
 export default function SignUp() {
     let history = useHistory();
-    let [name,setName]=useState('');
-    let [lastName, setLastName]=useState('')
-    let [email, setEmail]=useState('');
-    let [password, setPassword]=useState('');
+    let [state, setState]=useState({
+        name:'',
+        lastName:'',
+        email:'',
+        password:''
+    });
+
     let [regEmail, setRegEmail]=useState('existUser')
 
-    let handleName=(e)=>{
-        setName(e.target.value)
-    }
-
-    let handleLastName=(e)=>{
-        setLastName(e.target.value)
-    }
-
-    let handleEmail=(e)=>{
-        setEmail(e.target.value)
-    }
-
-    let handlePassword=(e)=>{
-        setPassword(e.target.value)
+    let handleChange=(e)=>{
+        setState({
+            ...state,
+            [e.target.name]:e.target.value
+        })
     }
 
     let handleSubmit=()=>{
+        let {name, lastName, email, password}=state;
         axios.post('http://localhost:8000/signup', {name, lastName, email, password})
         .then((response)=>{
         //console.log(response.data)
@@ -52,12 +47,12 @@ export default function SignUp() {
                         <p className={regEmail} >This e-mail already registered.</p>
                     </div>
                     <div className='pageMainTwo'>
-                        <input placeholder='name' name='name' onChange={handleName}/>
-                        <input placeholder='last name' name='lastName' onChange={handleLastName}/>
+                        <input placeholder='name' name='name' onChange={handleChange}/>
+                        <input placeholder='last name' name='lastName' onChange={handleChange}/>
                     </div>
                     <div className='pageMainTwo'>
-                        <input placeholder='email@example.com' name='email' onChange={handleEmail}/>
-                        <input placeholder='password' name='password' onChange={handlePassword}/>
+                        <input placeholder='email@example.com' name='email' onChange={handleChange}/>
+                        <input placeholder='password' name='password' onChange={handleChange}/>
                     </div>
                     <div className='pageMainThreeSignUp'>
                         <button className='button' onClick={handleSubmit}>Submit</button>
