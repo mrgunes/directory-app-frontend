@@ -11,10 +11,12 @@ import {DirectoryContext} from '../context/DirectoryContext';
 
 function App() {
   let [userId, setUserId]=useState(['']);
-  let setId=([user])=>{
-    setUserId({
-      user:user
-    })
+  let setId=([user, name, lastname])=>{
+    setUserId([{
+      user:user,
+      name:name,
+      lastname:lastname
+    }])
   }
 console.log(userId)
   return (

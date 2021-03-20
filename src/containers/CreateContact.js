@@ -28,11 +28,11 @@ export default function CreateContact() {
 
     let handleSubmit=()=>{
         let {nameLastName, email, phone, address, website, social, company, job, note}=state;
-        axios.post(`http://localhost:8000/createcontact/${userId}`, {nameLastName, email, phone, address, website, social, company, job, note})
+        axios.post(`http://localhost:8000/createcontact/${userId[0].user}`, {nameLastName, email, phone, address, website, social, company, job, note})
         .then((response)=>{
             let data=response.data;
             //console.log(data);
-            history.push(`/userpage/${userId}`)
+            history.push(`/userpage/${userId[0].user}`)
         })
         .catch((err)=>{
             console.log(err.message)
@@ -71,7 +71,7 @@ export default function CreateContact() {
                     </div>
                     <div className='pageContactButton'>
                         <button onClick={handleSubmit}>Save</button>
-                        <Link to={`/userpage/${userId}`}><button>Cancel</button></Link>
+                        <Link to={`/userpage/${userId[0].user}`}><button>Cancel</button></Link>
                     </div>
                 </div>
             </div>

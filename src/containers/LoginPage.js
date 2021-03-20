@@ -40,8 +40,9 @@ export default function LoginPage() {
                 }
                 setCheckUser('wrongUserP')
             } else if (data[1]===true)
-                setId([data[0]._id])
-                history.push(`/userpage/${userId.user}`)
+                setId([data[0]._id, data[0].name, data[0].lastName])
+                // console.log(userId[0].user)
+                history.push(`/userpage/${userId[0].user}`)
         }) 
         
     }
