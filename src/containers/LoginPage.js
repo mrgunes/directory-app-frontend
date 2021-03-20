@@ -25,20 +25,20 @@ export default function LoginPage() {
             console.log(response.data);
             let data=response.data;
             
-            if (typeof data==='object'){
+            if (data.email===false){
                 if(checkUser==='wrongUserP'){
                     setCheckUser('wrongUser')
                     setFindUser('notFoundP')
                 }
                 setFindUser('notFoundP')
-            } else if (data===false){
+            } else if (data[1]===false){
                 if(findUser==='notFoundP'){
                     setFindUser('notFound')
                     setCheckUser('wrongUserP')
                 }
                 setCheckUser('wrongUserP')
-            } else if (data===true)
-                history.push('/userpage')
+            } else if (data[1]===true)
+                history.push(`/userpage/${data[0]._id}`)
         })   
     }
 
