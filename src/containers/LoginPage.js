@@ -1,13 +1,15 @@
-import React, {useState} from 'react';
+import React, {useState,useContext} from 'react';
 import {Link, useHistory} from 'react-router-dom';
+import {DirectoryContext} from '../context/DirectoryContext'
 import axios from 'axios';
 
 export default function LoginPage() {
+    let {userId,setId}=useContext(DirectoryContext);
     let history = useHistory();
     let [email, setEmail]=useState('');
     let [password, setPassword]=useState('');
     let [findUser, setFindUser]=useState('notFound');
-    let [checkUser, setCheckUser]=useState('wrongUser')
+    let [checkUser, setCheckUser]=useState('wrongUser');
 
     let handleEmail=(e)=>{
         setEmail(e.target.value)
@@ -38,8 +40,10 @@ export default function LoginPage() {
                 }
                 setCheckUser('wrongUserP')
             } else if (data[1]===true)
-                history.push(`/userpage/${data[0]._id}`)
-        })   
+                setId([data[0]._id])
+                history.push(`/userpage/${userId.user}`)
+        }) 
+        
     }
 
     return (

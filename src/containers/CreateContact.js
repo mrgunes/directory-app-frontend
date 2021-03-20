@@ -1,9 +1,11 @@
-import React, {useState} from 'react';
+import React, {useState,useContext} from 'react';
 import '../MediaQueries.css';
 import {Link, useHistory} from 'react-router-dom';
+import {DirectoryContext} from '../context/DirectoryContext'
 import axios from 'axios';
 
 export default function CreateContact() {
+    let {userId}=useContext(DirectoryContext);
     let history = useHistory();
     let [state, setState]=useState({
         nameLastName:'',
@@ -26,11 +28,11 @@ export default function CreateContact() {
 
     let handleSubmit=()=>{
         let {nameLastName, email, phone, address, website, social, company, job, note}=state;
-        axios.post('http://localhost:8000/createcontact', {nameLastName, email, phone, address, website, social, company, job, note})
+        axios.post(`http://localhost:8000/createcontact/${userId}`, {nameLastName, email, phone, address, website, social, company, job, note})
         .then((response)=>{
             let data=response.data;
             //console.log(data);
-            history.push('/userpage')
+            history.push(`/userpage/${userId}`)
         })
         .catch((err)=>{
             console.log(err.message)
@@ -69,7 +71,7 @@ export default function CreateContact() {
                     </div>
                     <div className='pageContactButton'>
                         <button onClick={handleSubmit}>Save</button>
-                        <Link to='/userpage'><button>Cancel</button></Link>
+                        <Link to={`/userpage/${userId}`}><button>Cancel</button></Link>
                     </div>
                 </div>
             </div>

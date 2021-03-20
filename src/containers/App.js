@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import '../App.css';
 import LoginPage from './LoginPage'
 import SignUp from './SignUp';
@@ -6,9 +7,18 @@ import UserPage from  './UserPage';
 import CreateContact from './CreateContact'
 import ContactView from './ContactView'
 import {Route, Switch} from 'react-router-dom';
+import {DirectoryContext} from '../context/DirectoryContext';
 
 function App() {
+  let [userId, setUserId]=useState(['']);
+  let setId=([user])=>{
+    setUserId({
+      user:user
+    })
+  }
+console.log(userId)
   return (
+    <DirectoryContext.Provider value={{userId, setId}}>
     <div className="main">
       <Switch>
          <Route exact path="/" component={LoginPage} />
@@ -19,6 +29,7 @@ function App() {
          <Route path="/contactview" component={ContactView} />
        </Switch>
     </div>
+    </DirectoryContext.Provider>
   );
 }
 
