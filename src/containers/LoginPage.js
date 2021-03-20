@@ -24,7 +24,7 @@ export default function LoginPage() {
     let onLogin=()=>{
         axios.post('http://localhost:8000/', {email, password})
         .then((response)=>{
-            //console.log(response.data);
+            console.log(response.data);
             let data=response.data;
             
             if (data.email===false){
@@ -39,10 +39,11 @@ export default function LoginPage() {
                     setCheckUser('wrongUserP')
                 }
                 setCheckUser('wrongUserP')
-            } else if (data[1]===true)
+            } else if (data[1]===true) {
                 setId([data[0]._id, data[0].name, data[0].lastName])
                 //console.log(userId[0].user)
                 history.push(`/userpage/${data[0]._id}`)
+            }
         }) 
         
     }

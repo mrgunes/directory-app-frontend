@@ -31,7 +31,7 @@ export default function UserPage() {
     // },[contact]);
 
 
-//console.log(contact)
+console.log(contact)
 
 
     return (
