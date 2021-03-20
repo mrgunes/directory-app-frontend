@@ -11,16 +11,26 @@ import {DirectoryContext} from '../context/DirectoryContext';
 
 function App() {
   let [userId, setUserId]=useState(['']);
+  let [contact, setContact]=useState(['']);
+
   let setId=([user, name, lastname])=>{
     setUserId([{
       user:user,
       name:name,
-      lastname:lastname
+      lastname:lastname,
     }])
   }
-console.log(userId)
+
+  let setCont=([cont])=>{
+    setContact([{
+      contact:cont
+    }])
+  }
+
+//console.log(contact)
+//console.log(userId)
   return (
-    <DirectoryContext.Provider value={{userId, setId}}>
+    <DirectoryContext.Provider value={{userId, setId, contact, setCont}}>
     <div className="main">
       <Switch>
          <Route exact path="/" component={LoginPage} />

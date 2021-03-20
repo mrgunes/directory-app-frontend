@@ -1,10 +1,39 @@
-import React, {useContext} from 'react';
+import React, {useContext,useEffect,useState} from 'react';
 import '../MediaQueries.css';
 import {DirectoryContext} from '../context/DirectoryContext'
 import {Link} from 'react-router-dom';
+import axios from 'axios';
 
 export default function UserPage() {
     let {userId}=useContext(DirectoryContext);
+    let [isLoading, setLoading] = useState(true);
+    let [contact, setContact] = useState();
+
+    useEffect(() => {
+        axios.get(`http://localhost:8000/userpage/${userId[0].user}`)
+        .then((response) => {
+          setContact(response.data);
+          setLoading(false);
+        });
+      }, []);
+
+      if (isLoading) {
+        return <div>Loading...</div>
+      }
+
+    // useEffect(()=>{
+    //     axios.get(`http://localhost:8000/userpage/${userId[0].user}`)
+    //     .then((response)=>{
+    //         let data=response.data
+    //         //console.log(data)
+    //         setCont(data)
+    //     })
+    // },[contact]);
+
+
+//console.log(contact)
+
+
     return (
         <div className='userPageMain'>
             <div className='userPageNav'>
@@ -23,7 +52,7 @@ export default function UserPage() {
                         <p>You can create your contact list click to 'Create' button.</p>
                     </div>
                     <div className='pageMainThree'>
-                        <Link to='/createcontact'><button>Create</button></Link>
+                        <Link to={`/createcontact/${userId[0].user}`}><button>Create</button></Link>
                     </div>
                 </div>
             </div>
@@ -35,9 +64,9 @@ export default function UserPage() {
                                 <i className="far fa-address-card fa-5x" ></i>
                             </div>
                             <div className='infoArea'>
-                                <h4><Link to='/contactview'>Kaan Catik</Link></h4>
-                                <p>Web Developer</p>
-                                <p>+1 (123)456 7890</p>
+                                 <h4><Link to='/contactview'>{contact[0].contacts[0].nameLastName}</Link></h4>
+                                <p>{contact[0].contacts[0].job}</p>
+                                <p>{contact[0].contacts[0].phone}</p>
                             </div>
                         </div>
                     </div>
