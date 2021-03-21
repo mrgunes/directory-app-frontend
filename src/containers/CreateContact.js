@@ -42,7 +42,7 @@ export default function CreateContact() {
         <div className='userPageMain'>
             <div className='contactPageNav'>
                 <span className='contactPageSpanOne'>
-                    <h3 className='contactPageh3One'>Welcome Kaan Catik</h3>
+                    <h3 className='contactPageh3One'>{`Welcome ${userId[0].name} ${userId[0].lastname}`}</h3>
                 </span>
                 <ul className='contactPageUl'>
                     {/* <li className='contactPageLi'><a href='#'>Account</a></li> */}
