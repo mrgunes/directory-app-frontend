@@ -1,10 +1,11 @@
-import React, {useState, useEffect,useContext} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import '../MediaQueries.css';
 import {DirectoryContext} from '../context/DirectoryContext';
-import {Link} from 'react-router-dom';
-import axios from 'axios'
+import {Link, useHistory} from 'react-router-dom';
+import axios from 'axios';
 
 export default function ContactView() {
+    let history = useHistory();
     let {userId}=useContext(DirectoryContext);
     let [state, setState]=useState({
         nameLastName:'',
@@ -82,6 +83,19 @@ export default function ContactView() {
         });
     }
 
+    let handleDelete=()=>{
+        axios.delete(`http://localhost:8000/contactview/${pathname[3]}`)
+        .then(response => {
+            let data=response.data
+            //console.log(data);
+            history.push(`/userpage/${userId[0].user}`)
+        })
+        .catch((err) => {
+            console.log(err.message);
+        });
+       
+    }
+
     //console.log(state)
 
     return (
@@ -121,7 +135,7 @@ export default function ContactView() {
                         <Link to={`/contactview/${userId[0].user}/${pathname[3]}`} className={hiddenSecond}><button  onClick={()=>{handleReadOnly() ; hiddenButton() ; handleUpdate()}}>Save</button></Link>
                         <button className={hiddenSecond} onClick={()=>{handleReadOnly() ; hiddenButton()}}>Cancel</button>
                     </div>
-                    <h5>Delete this contact?</h5>
+                    <h5 onClick={handleDelete} >Delete this contact?</h5>
                 </div>
             </div>
         </div>

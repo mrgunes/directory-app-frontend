@@ -251,6 +251,7 @@ h5{
     text-align:center;
     font-weight: 400;
     background-color: whitesmoke;
+    cursor: pointer
 }
 
 .infoArea a{

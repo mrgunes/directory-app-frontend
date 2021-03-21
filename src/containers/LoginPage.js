@@ -45,7 +45,6 @@ export default function LoginPage() {
                 history.push(`/userpage/${data[0]._id}`)
             }
         }) 
-        
     }
 
     return (
