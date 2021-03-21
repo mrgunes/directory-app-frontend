@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 
 export default function UserPage() {
-    let {userId,setCont}=useContext(DirectoryContext);
+    let {userId}=useContext(DirectoryContext);
     let [isLoading, setLoading] = useState(true);
     let [contact, setContact] = useState();
 
@@ -13,7 +13,6 @@ export default function UserPage() {
         axios.get(`http://localhost:8000/userpage/${userId[0].user}`)
         .then((response) => {
           setContact(response.data[0].contacts);
-          setCont(response.data[0].contacts)
           setLoading(false);
         });
       }, []);
@@ -22,17 +21,7 @@ export default function UserPage() {
         return <div>Loading...</div>
       }
 
-    // useEffect(()=>{
-    //     axios.get(`http://localhost:8000/userpage/${userId[0].user}`)
-    //     .then((response)=>{
-    //         let data=response.data
-    //         //console.log(data)
-    //         setCont(data)
-    //     })
-    // },[contact]);
-
-
-console.log(contact)
+//console.log(contact)
 
 let map=contact.map((data, index)=>{
     return(

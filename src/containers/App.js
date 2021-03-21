@@ -27,8 +27,9 @@ function App() {
     })
   }
 
-console.log(contact)
+//console.log(contact)
 //console.log(userId)
+
   return (
     <DirectoryContext.Provider value={{userId, setId, contact, setCont}}>
         <div className="main">
