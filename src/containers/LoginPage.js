@@ -24,7 +24,7 @@ export default function LoginPage() {
     let onLogin=()=>{
         axios.post('http://localhost:8000/', {email, password})
         .then((response)=>{
-            console.log(response.data);
+            //console.log(response.data);
             let data=response.data;
             
             if (data.email===false){

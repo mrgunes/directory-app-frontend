@@ -31,16 +31,16 @@ function App() {
 //console.log(userId)
   return (
     <DirectoryContext.Provider value={{userId, setId, contact, setCont}}>
-    <div className="main">
-      <Switch>
-         <Route exact path="/" component={LoginPage} />
-         <Route path="/signup" component={SignUp} />
-         <Route path="/usercreated" component={UserCreated} />
-         <Route path="/userpage" component={UserPage} />
-         <Route path="/createcontact" component={CreateContact} />
-         <Route path="/contactview" component={ContactView} />
-       </Switch>
-    </div>
+        <div className="main">
+          <Switch>
+            <Route exact path="/" component={LoginPage} />
+            <Route path="/signup" component={SignUp} />
+            <Route path="/usercreated" component={UserCreated} />
+            <Route path="/userpage" component={UserPage} />
+            <Route path="/createcontact" component={CreateContact} />
+            <Route path="/contactview" component={ContactView} />
+          </Switch>
+        </div>
     </DirectoryContext.Provider>
   );
 }

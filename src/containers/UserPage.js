@@ -12,7 +12,7 @@ export default function UserPage() {
     useEffect(() => {
         axios.get(`http://localhost:8000/userpage/${userId[0].user}`)
         .then((response) => {
-          setContact(response.data);
+          setContact(response.data[0].contacts);
           setLoading(false);
         });
       }, []);
@@ -33,7 +33,24 @@ export default function UserPage() {
 
 console.log(contact)
 
-
+let map=contact.map((data, index)=>{
+    return(
+        <div key={index} className='pageMainContact'>
+            <div className='pageChildContact'>
+                <div className='pageMainOneContact'>
+                    <div className='phoneIcon'>
+                        <i className="far fa-address-card fa-5x" ></i>
+                    </div>
+                    <div className='infoArea'>
+                        <h4><Link to='/contactview'>{data.nameLastName}</Link></h4>
+                        <p>{data.job}</p>
+                        <p>{data.phone}</p>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+})
     return (
         <div className='userPageMain'>
             <div className='userPageNav'>
@@ -57,20 +74,7 @@ console.log(contact)
                 </div>
             </div>
             <div className='mainContact'>
-                <div className='pageMainContact'>
-                    <div className='pageChildContact'>
-                        <div className='pageMainOneContact'>
-                            <div className='phoneIcon'>
-                                <i className="far fa-address-card fa-5x" ></i>
-                            </div>
-                            <div className='infoArea'>
-                                 <h4><Link to='/contactview'>{contact[0].contacts[0].nameLastName}</Link></h4>
-                                <p>{contact[0].contacts[0].job}</p>
-                                <p>{contact[0].contacts[0].phone}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {map}
             </div>
         </div>
     )
