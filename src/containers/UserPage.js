@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 
 export default function UserPage() {
-    let {userId}=useContext(DirectoryContext);
+    let {userId,setCont}=useContext(DirectoryContext);
     let [isLoading, setLoading] = useState(true);
     let [contact, setContact] = useState();
 
@@ -13,6 +13,7 @@ export default function UserPage() {
         axios.get(`http://localhost:8000/userpage/${userId[0].user}`)
         .then((response) => {
           setContact(response.data[0].contacts);
+          setCont(response.data[0].contacts)
           setLoading(false);
         });
       }, []);
@@ -42,7 +43,7 @@ let map=contact.map((data, index)=>{
                         <i className="far fa-address-card fa-5x" ></i>
                     </div>
                     <div className='infoArea'>
-                        <h4><Link to='/contactview'>{data.nameLastName}</Link></h4>
+                        <h4><Link to={`/contactview/${userId[0].user}/${data._id}`}>{data.nameLastName}</Link></h4>
                         <p>{data.job}</p>
                         <p>{data.phone}</p>   
                     </div>

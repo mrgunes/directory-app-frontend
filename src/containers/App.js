@@ -11,7 +11,7 @@ import {DirectoryContext} from '../context/DirectoryContext';
 
 function App() {
   let [userId, setUserId]=useState(['']);
-  let [contact, setContact]=useState(['']);
+  let [contact, setContact]=useState();
 
   let setId=([user, name, lastname])=>{
     setUserId([{
@@ -21,13 +21,13 @@ function App() {
     }])
   }
 
-  let setCont=([cont])=>{
-    setContact([{
-      contact:cont
-    }])
+  let setCont=(cont)=>{
+    setContact({
+      cont,
+    })
   }
 
-//console.log(contact)
+console.log(contact)
 //console.log(userId)
   return (
     <DirectoryContext.Provider value={{userId, setId, contact, setCont}}>
